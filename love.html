@@ -1,0 +1,110 @@
+
+<!DOCTYPE html >
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	/*src: url('digital-7_mono.ttf') format("truetype");*/
+}
+</style>
+<link href="css/love.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+</head>
+<body>
+<div style="text-align:center;clear:both;">
+</div>
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span  style="font-size: 14px; color:#808000; font-weight:bold;">亲爱的生日快乐。<br />这是陪你度过的第八个生日了。<br />以后还要很多很多个生日会你一起度过的。
+			</span><br />
+			<span class="comments">/**</span><br />
+			<span class="comments">*&emsp;我想告诉你&emsp;*</span>
+			<span class="keyword">我真的很喜欢你，像风走了八千里。</span><br />
+			<span class="comments">*&emsp;&emsp;往后余生&emsp;&emsp;*</span>
+			<span class="keyword">我真的很喜欢你，像阵雨下到了南极。</span><br />
+			<span class="comments">*&emsp;&emsp;风雪是你&emsp;&emsp;*</span>
+			<span class="keyword">我真的很喜欢你，像珊瑚沉到海底。</span><br />
+			<span class="comments">*&emsp;&emsp;平淡是你&emsp;&emsp;*</span>
+			<span class="keyword">我真的很喜欢你，像盲人看一出哑剧。</span><br />
+			<span class="comments">*&emsp;清贫也是你&emsp;*</span>
+			<span class="keyword">我真的很喜欢你，像第一首诗不尽人意。</span><br />
+			<span class="comments">*&emsp;&emsp;荣华是你&emsp;&emsp;*</span>
+			<span class="keyword">我真的很喜欢你，像太阳自转不论朝夕。</span><br />
+			<span class="comments">*心底温柔是你*</span>
+			<span class="keyword">我真的很喜欢你，像秋叶落得悄无声息。</span><br />
+			<span class="comments">*&emsp;&emsp;目光所致&emsp;&emsp;*</span>
+			<span class="keyword">我真的很喜欢你，像春雨下的淅淅沥沥。</span><br />
+			<span class="comments">*&emsp;&emsp;&emsp;也是你&emsp;&emsp;&emsp;*</span>
+			<span class="keyword">我真的很喜欢你，像狗一样本性难移。</span><br />
+			<span class="comments">*&emsp;&emsp;往后余生&emsp;&emsp;*</span>
+			<span class="keyword">我真的很喜欢你，所以想把你捧在心上。</span><br />
+			<span class="comments">*&emsp;&emsp;余你余我&emsp;&emsp;*</span>
+			<span class="keyword">我真的很喜欢你，所以无时无刻不在想你。</span><br />
+			<span class="comments">*&emsp;余生全是你&emsp;*</span>
+			<span class="keyword">我真的，很喜欢你。</span><br />
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*2010—10-30,</span><br />
+			<span class="space"/><span class="comments">*2018-11-14.</span><br />
+			<span class="space"/><span class="comments">**/</span><br />
+			<br>
+			<span style="font-size: 14px;color: blue;">I want to say:</span><br />
+			<span style="font-size: 14px;color: blue;">Baby, I love you forever;</span><br />
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					亲爱的琪琪，这是我们相爱在一起的时光。
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					我爱你直到永永远远。<br/>
+					<div class="signature">- 幼稚的黎先生</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2010, 10, 30);
+together.setHours(20);
+together.setMinutes(0);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+</body>
+</html>
