@@ -5,6 +5,7 @@ body {
     font-size: 12px;
     overflow: auto;
     position: relative;
+    width: 1280px !important;
 }
 body ::after{
     content: "";
