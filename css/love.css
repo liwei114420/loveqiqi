@@ -9,7 +9,7 @@ body {
 }
 body ::after{
     content: "";
-    background: url(../image/qiqi.jpg);
+    background: url(../qiqi.jpg);
     background-size: 25% 50%;
     opacity: 0.05;
     top: 0;
